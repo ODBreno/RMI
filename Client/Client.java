@@ -51,6 +51,10 @@ public class Client {
                 distanceBC = calculator.calculateCityBlockDistance(b, c);
             }
 
+            System.out.println("Distância A-B: " + distanceAB);
+            System.out.println("Distância A-C: " + distanceAC);
+            System.out.println("Distância B-C: " + distanceBC);
+
             // Encontra o par mais similar
             if (distanceAB < distanceAC && distanceAB < distanceBC) {
                 System.out.println("O par mais similar é A-B");
