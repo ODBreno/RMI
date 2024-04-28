@@ -1,3 +1,4 @@
+import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -41,9 +42,8 @@ public class DistanceCalculatorImpl extends UnicastRemoteObject implements Dista
             DistanceCalculatorImpl calculator = new DistanceCalculatorImpl();
 
             // Registra o objeto remoto no registro RMI
-            Registry registry = LocateRegistry.createRegistry(1400);
+            Registry registry = LocateRegistry.createRegistry(1100);
             registry.rebind("DistanceCalculator", calculator);
-
             System.out.println("Servidor RMI pronto...");
 
         } catch (Exception e) {
